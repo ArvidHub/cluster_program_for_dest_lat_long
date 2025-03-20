@@ -12,7 +12,7 @@ import subprocess
 from math import radians, sin, cos, sqrt, atan2
 
 # Maximum cluster diameter in kilometers
-MAX_CLUSTER_DIAMETER = 20
+MAX_CLUSTER_DIAMETER = 10
 
 def load_data(file_path):
     """

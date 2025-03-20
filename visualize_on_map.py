@@ -32,6 +32,14 @@ with open(input_file, 'r') as file:
             popup=f"Destination: {destination}, Cluster: {cluster_number}",
             icon=folium.Icon(color=marker_color)
         ).add_to(mymap)
+        
+        # Add plain text for cluster number directly on the map
+        folium.map.Marker(
+            [lat, lon],
+            icon=folium.DivIcon(
+                html=f'<div style="font-size: 12px; font-weight: bold; color: black; transform: translate(-50%, -50px);">{cluster_number}</div>'
+            )
+        ).add_to(mymap)
 
 # Save the map to an HTML file
 output_file = "c:\\Users\\arvid\\Documents\\python\\map.html"
